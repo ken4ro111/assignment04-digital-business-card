@@ -12,6 +12,10 @@
     "test:run": "vitest run"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.10.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "framer-motion": "^12.38.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
