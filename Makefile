@@ -9,4 +9,4 @@ deploy:
 all: build deploy
 
 test:
-	npm run test
+	npm run test:run
