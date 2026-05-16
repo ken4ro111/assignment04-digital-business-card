@@ -7,7 +7,7 @@ export const userSkillQuery = {
     const { data, error } = await supabase
       .from("user_skill")
       .select("skills(id, name, created_at)")
-      .eq("user_id", userId);
+      .eq("user_id", Number(userId));
 
     if (error) throw new Error(error.message);
 

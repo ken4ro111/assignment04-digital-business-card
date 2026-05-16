@@ -14,7 +14,7 @@ export const userRepository = {
     const { data, error } = await supabase
       .from("users")
       .select("*")
-      .eq("id", id)
+      .eq("id", Number(id))
       .single();
 
     if (error) throw new Error(error.message);
