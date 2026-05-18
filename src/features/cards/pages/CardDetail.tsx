@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useUser } from "../../../hooks/useUser";
 import { useSkills } from "../../../hooks/useSkills";
-import { Page404 } from "./errors/user/Page404";
+import { Page404 } from "./errors/Page404";
 import { Page500 } from "./errors/Page500";
 import {
   Box,
@@ -45,7 +45,7 @@ export const CardDetail = () => {
       </Center>
     );
   if (userError || skillsError) return <Page500 />;
-  if (!user) return <Page404 />;
+  if (!user) return <Page404 text="ユーザー" />;
 
   const snsLinks = [
     { label: "GitHub", url: user.githubUrl, icon: FaGithub },
@@ -112,7 +112,7 @@ export const CardDetail = () => {
                       as={icon}
                       boxSize={{ base: 8, md: 10 }}
                       color="teal.700"
-                      _hover={{ color: "blue.500" }}
+                      _hover={{ color: "teal.400" }}
                       transition="color 0.2s"
                     />
                   </Link>

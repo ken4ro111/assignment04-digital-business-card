@@ -1,6 +1,12 @@
 import { Box, Center, Heading, Text, VStack } from "@chakra-ui/react";
 
-export const Page404 = () => {
+type Props = {
+  text: string;
+};
+
+export const Page404 = (props: Props) => {
+  const { text } = props;
+
   return (
     <Center minH="100vh" bg="gray.100">
       <Box
@@ -18,10 +24,10 @@ export const Page404 = () => {
             404
           </Heading>
           <Heading size="md" color="gray.700">
-            ユーザーが見つかりません
+            {`${text}が見つかりません`}
           </Heading>
           <Text fontSize="sm" color="gray.500">
-            指定されたユーザーは存在しません
+            {`${text}は存在しません`}
           </Text>
         </VStack>
       </Box>
